@@ -13,17 +13,17 @@
   --color-8: rgba(251, 202, 52, 1);
   --water: rgba(175, 209, 216, 1);
   --water-miss: rgba(65, 168, 191, 1);
-  --grid-test-size: 375px;
+  --grid-test-size: 23.5rem;
   --grid-gap: calc(var(--grid-test-size) / 4);
-  --base-border-size: 1px;
-  --base-margin: 22px;
-  --b-shadow: rgba(45, 35, 66, 0.4) 0 5px 10px,
-    rgba(45, 35, 66, 0.3) 0 18px 33px -8px, #d6d6e7 0 -8px 0 inset;
+  --base-border-size: 0.063rem;
+  --base-margin: 1.375rem;
+  --b-shadow: rgba(45, 35, 66, 0.4) 0 0.3rem 0.625rem,
+    rgba(45, 35, 66, 0.3) 0 1.125rem 2rem -0.5rem, #d6d6e7 0 -0.5rem 0 inset;
 }
 
 html,
 body {
-  min-width: 316px;
+  min-width: 19.75rem;
   overflow-x: auto;
 }
 
@@ -177,7 +177,7 @@ button {
   align-items: center;
   appearance: none;
   background-color: #fcfcfd;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   border-width: 0;
   box-shadow: var(--b-shadow);
   box-sizing: border-box;
@@ -200,8 +200,8 @@ button {
   white-space: nowrap;
   will-change: box-shadow, transform;
   height: calc(var(--grid-test-size) / 7, 5);
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   font-size: 1.75rem;
   margin-bottom: var(--base-margin);
 }
@@ -212,8 +212,8 @@ button:hover {
 }
 
 button:active {
-  box-shadow: #d6d6e7 0 8px 18px inset;
-  transform: translateY(2.5px);
+  box-shadow: #d6d6e7 0 0.5rem 1.125rem inset;
+  transform: translateY(0.156rem);
 }
 
 .autoplace {
@@ -324,7 +324,7 @@ button:active {
   line-height: 2em;
   font-weight: bold;
   color: #fff;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0.063rem 0 rgba(0, 0, 0, 0.4);
 }
 .tgl-skewed + .tgl-btn:after {
   left: 100%;
@@ -383,11 +383,11 @@ button:active {
   }
 }
 
-@media (max-width: 1125px) {
+@media (max-width: 70rem) {
   :root {
-    --grid-test-size: 263px;
+    --grid-test-size: 16.5rem;
     --grid-gap: calc(var(--grid-test-size) / 4);
-    --base-border-size: 1.75px;
+    --base-border-size: 0.1rem;
   }
 
   .tgl-box {
@@ -402,11 +402,11 @@ button:active {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 56.25rem) {
   :root {
-    --grid-test-size: 212px;
+    --grid-test-size: 13.25rem;
     --grid-gap: calc(var(--grid-test-size) / 4);
-    --base-border-size: 1.25px;
+    --base-border-size: 0.075rem;
   }
 
   header {
