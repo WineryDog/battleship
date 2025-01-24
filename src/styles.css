@@ -10,11 +10,12 @@
   --color-8: rgba(251, 202, 52, 1);
   --water: rgba(175, 209, 216, 1);
   --water-miss: rgba(65, 168, 191, 1);
-  --grid-test-size: 150px;
+  --grid-test-size: 375px;
   --grid-gap: calc(var(--grid-test-size) / 4);
   --base-border-size: 1px;
-  --b-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  --base-margin: 22px;
+  --b-shadow: rgba(45, 35, 66, 0.4) 0 5px 10px,
+    rgba(45, 35, 66, 0.3) 0 18px 33px -8px, #d6d6e7 0 -8px 0 inset;
 }
 
 html,
@@ -40,8 +41,8 @@ main {
 }
 
 header {
-  margin-bottom: 10px;
-  font-size: 2rem;
+  margin-bottom: var(--base-margin);
+  font-size: 5rem;
 }
 
 .game {
@@ -62,7 +63,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0 10px 0;
+  margin: calc(var(--base-margin) * 1.25) 0 calc(var(--base-margin) * 1.25) 0;
+  font-size: 2.5rem;
 }
 
 .p1-gb,
@@ -74,8 +76,7 @@ header {
   display: grid;
   grid-template-rows: repeat(10, 1fr);
   border: solid var(--font) var(--base-border-size);
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-shadow: var(--b-shadow);
 }
 
 .row {
@@ -141,8 +142,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-shadow: var(--b-shadow);
 }
 
 .fleet {
@@ -152,7 +152,7 @@ header {
   border: solid var(--font) var(--base-border-size);
   width: calc(calc(var(--grid-test-size) * 2) + calc(var(--grid-gap)));
   height: calc(calc(var(--grid-test-size) / 10) * 5.7);
-  gap: 5px;
+  gap: calc(var(--base-margin) / 2);
   background-color: var(--water);
 }
 
@@ -176,8 +176,7 @@ button {
   background-color: #fcfcfd;
   border-radius: 4px;
   border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-shadow: var(--b-shadow);
   box-sizing: border-box;
   color: var(--font);
   cursor: pointer;
@@ -198,24 +197,24 @@ button {
   white-space: nowrap;
   will-change: box-shadow, transform;
   height: calc(var(--grid-test-size) / 7, 5);
-  padding-left: 16px;
-  padding-right: 16px;
-  font-size: 0.7rem;
-  margin-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 1.75rem;
+  margin-bottom: var(--base-margin);
 }
 
 button:hover {
   box-shadow: var(--b-shadow);
-  transform: translateY(-1px);
+  transform: translateY(-2.5px);
 }
 
 button:active {
-  box-shadow: #d6d6e7 0 3px 7px inset;
-  transform: translateY(1px);
+  box-shadow: #d6d6e7 0 8px 18px inset;
+  transform: translateY(2.5px);
 }
 
 .autoplace {
-  font-size: 0.6rem;
+  font-size: 1.5rem;
   font-style: italic;
 }
 
@@ -233,12 +232,13 @@ button:active {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  margin: 0 10px 0 10px;
+  margin: 0 var(--base-border-size) 0 var(--base-border-size);
+  gap: var(--base-margin);
 }
 
 .fleet-btns > h4 {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 2rem;
 }
 
 .tgl {
@@ -351,7 +351,8 @@ button:active {
 }
 
 .tgl-box {
-  padding-bottom: 10px;
+  margin-bottom: var(--base-margin);
+  transform: scale(2.25);
 }
 
 .right-content {
@@ -363,8 +364,8 @@ button:active {
 
 .foot {
   color: var(--font);
-  font-size: 0.4rem;
-  margin-top: 20px;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .fa-github {
@@ -372,41 +373,57 @@ button:active {
 }
 
 .attribution {
+  margin: 0;
   a {
     text-decoration: none;
     color: var(--font);
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 1125px) {
   :root {
-    --grid-test-size: 105px;
+    --grid-test-size: 263px;
     --grid-gap: calc(var(--grid-test-size) / 4);
-    --base-border-size: 0.7px;
+    --base-border-size: 1.75px;
   }
 
   .tgl-box {
-    transform: scale(0.7);
+    transform: scale(1.6);
+  }
+
+  .info {
+    font-size: 2rem;
+  }
+  .attribution {
+    transform: scale(0.8);
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 900px) {
   :root {
-    --grid-test-size: 85px;
+    --grid-test-size: 212px;
     --grid-gap: calc(var(--grid-test-size) / 4);
-    --base-border-size: 0.5px;
+    --base-border-size: 1.25px;
   }
 
   header {
-    font-size: 1.6rem;
+    font-size: 4rem;
+  }
+
+  .info {
+    font-size: 1.75rem;
   }
 
   .right-content {
-    max-width: 6rem;
+    max-width: 15rem;
     margin-left: 0;
   }
 
   .game-btns {
     transform: scale(0.7);
+  }
+
+  .foot {
+    font-size: 0.8rem;
   }
 }
