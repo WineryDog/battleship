@@ -21,7 +21,9 @@
 html,
 body {
   min-width: 19.75rem;
+  min-height: 100vh;
   overflow-x: auto;
+  height: 100vh;
 }
 
 main {
