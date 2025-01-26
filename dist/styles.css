@@ -19,12 +19,15 @@
   --base-margin: 2vh;
   --b-shadow: rgba(45, 35, 66, 0.4) 0 0.3rem 0.625rem,
     rgba(45, 35, 66, 0.3) 0 1.125rem 2rem -0.5rem, #d6d6e7 0 -0.5rem 0 inset;
+  --h-font: 3.5rem;
+  --info-font: 2rem;
 }
 
 html,
 body {
   min-width: 316px;
   height: 100dvh;
+  overflow: hidden;
 }
 
 main {
@@ -53,7 +56,7 @@ main {
 
 header {
   margin-bottom: var(--base-margin);
-  font-size: 5rem;
+  font-size: var(--h-font);
 }
 
 .game {
@@ -75,7 +78,7 @@ header {
   justify-content: center;
   align-items: center;
   margin: calc(var(--base-margin) * 1.25) 0 calc(var(--base-margin) * 1.25) 0;
-  font-size: 2.5rem;
+  font-size: var(--info-font);
 }
 
 .p1-gb,
@@ -234,6 +237,7 @@ button:active {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: var(--base-margin);
 }
 
 .fleet-btns {
@@ -363,7 +367,7 @@ button:active {
 
 .tgl-box {
   margin-bottom: var(--base-margin);
-  transform: scale(2.25);
+  transform: scale(2);
 }
 
 .foot {
@@ -385,9 +389,8 @@ button:active {
 }
 
 /* huge */
-@media (max-width: 1200px) {
+@media (max-width: 1290px) {
   :root {
-    --grid-test-size: 16.5rem;
     --grid-gap: calc(var(--grid-test-size) / 4);
     --base-border-size: 0.1rem;
   }
@@ -413,11 +416,11 @@ button:active {
   }
 
   header {
-    font-size: 4rem;
+    font-size: calc(var(--h-font) * 0.85);
   }
 
   .info {
-    font-size: 1.75rem;
+    font-size: calc(var(--info-font) * 0.85);
   }
 
   .right-content {
@@ -431,6 +434,17 @@ button:active {
 
   .foot {
     font-size: 0.8rem;
+  }
+}
+
+/* vertical */
+@media (max-width: 500px) and (min-height: 650px) {
+  main {
+    flex-direction: column;
+  }
+
+  .left-content {
+    transform: scale(0.7);
   }
 }
 
