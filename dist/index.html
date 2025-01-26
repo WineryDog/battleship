@@ -19,45 +19,48 @@
   <script defer src="main.js"></script><link href="styles.css" rel="stylesheet"></head>
   <body>
     <main>
-      <div class="left-content">
+      <div class="content">
         <header>Battleship</header>
         <div class="game">
           <div class="gameboards">
             <div class="p1-gb gameboard"></div>
+            <div class="middle-content">
+              <div class="game-btns">
+                <button class="start">Start</button>
+                <button class="reset">Reset</button>
+                <div class="fleet-btns">
+                  <h4>Axis:</h4>
+                  <div class="tgl-box">
+                    <input class="tgl tgl-skewed" id="cb3" type="checkbox" />
+                    <label
+                      class="tgl-btn"
+                      data-tg-off="X"
+                      data-tg-on="Y"
+                      for="cb3"
+                    ></label>
+                  </div>
+                  <button class="autoplace">AUTOPLACE</button>
+                </div>
+                <div class="foot">
+                  <p class="attribution">
+                    Coded by
+                    <a
+                      class="attribution-link"
+                      href="https://github.com/WineryDog"
+                    >
+                      <i class="fa-brands fa-github" aria-hidden="true"></i>
+                      WineryDog
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
             <div class="p2-gb gameboard"></div>
           </div>
         </div>
         <div class="info">Please Start the game</div>
         <div class="fleet-box">
           <div class="fleet"></div>
-        </div>
-      </div>
-      <div class="right-content">
-        <div class="game-btns">
-          <button class="start">Start</button>
-          <button class="reset">Reset</button>
-          <div class="fleet-btns">
-            <h4>Axis:</h4>
-            <div class="tgl-box">
-              <input class="tgl tgl-skewed" id="cb3" type="checkbox" />
-              <label
-                class="tgl-btn"
-                data-tg-off="X"
-                data-tg-on="Y"
-                for="cb3"
-              ></label>
-            </div>
-            <button class="autoplace">AUTOPLACE</button>
-          </div>
-          <div class="foot">
-            <p class="attribution">
-              Coded by
-              <a class="attribution-link" href="https://github.com/WineryDog">
-                <i class="fa-brands fa-github" aria-hidden="true"></i>
-                WineryDog
-              </a>
-            </p>
-          </div>
         </div>
       </div>
     </main>
