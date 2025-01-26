@@ -13,14 +13,14 @@
   --color-8: rgba(251, 202, 52, 1);
   --water: rgba(175, 209, 216, 1);
   --water-miss: rgba(65, 168, 191, 1);
-  --grid-test-size: 18.5vw;
+  --grid-test-size: 19vw;
   --grid-gap: calc(var(--grid-test-size) / 4);
   --base-border-size: 0.063rem;
-  --base-margin: 1.75vh;
+  --base-margin: 1.5vh;
   --b-shadow: rgba(45, 35, 66, 0.4) 0 0.3rem 0.625rem,
     rgba(45, 35, 66, 0.3) 0 1.125rem 2rem -0.5rem, #d6d6e7 0 -0.5rem 0 inset;
-  --h-font: 3rem;
-  --info-font: 1.6rem;
+  --h-font: 2.8rem;
+  --info-font: 1.5rem;
 }
 
 html,
@@ -77,7 +77,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: calc(var(--base-margin) * 1.25) 0 calc(var(--base-margin) * 1.25) 0;
+  margin: calc(var(--base-margin) * 1.15) 0 calc(var(--base-margin) * 1.15) 0;
   font-size: var(--info-font);
 }
 
@@ -437,6 +437,26 @@ button:active {
 
   .foot {
     font-size: 0.8rem;
+  }
+}
+
+/* medium */
+@media (max-width: 768px) {
+  :root {
+    --grid-gap: calc(var(--grid-test-size) / 4);
+    --base-border-size: 0.075rem;
+  }
+
+  header {
+    font-size: calc(var(--h-font) * 0.7);
+  }
+
+  .info {
+    font-size: calc(var(--info-font) * 0.7);
+  }
+
+  .game-btns {
+    transform: scale(0.55);
   }
 }
 
