@@ -13,7 +13,7 @@
   --color-8: rgba(251, 202, 52, 1);
   --water: rgba(175, 209, 216, 1);
   --water-miss: rgba(65, 168, 191, 1);
-  --grid-test-size: 17.5vw;
+  --grid-test-size: 18.5vw;
   --grid-gap: calc(var(--grid-test-size) / 4);
   --base-border-size: 0.063rem;
   --base-margin: 1.75vh;
