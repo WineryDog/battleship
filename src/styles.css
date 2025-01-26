@@ -10,27 +10,24 @@
   --color-8: rgba(251, 202, 52, 1);
   --water: rgba(175, 209, 216, 1);
   --water-miss: rgba(65, 168, 191, 1);
-  --grid-test-size: 23.5rem;
+  --grid-test-size: 20vw;
   --grid-gap: calc(var(--grid-test-size) / 4);
   --base-border-size: 0.063rem;
-  --base-margin: 1.375rem;
+  --base-margin: 2vh;
   --b-shadow: rgba(45, 35, 66, 0.4) 0 0.3rem 0.625rem,
     rgba(45, 35, 66, 0.3) 0 1.125rem 2rem -0.5rem, #d6d6e7 0 -0.5rem 0 inset;
 }
 
 html,
 body {
-  min-width: 19.75rem;
-  min-height: 100vh;
-  overflow-x: auto;
-  height: 100vh;
+  min-width: 316px;
+  height: 100dvh;
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: calc(var(--grid-gap) / 2);
   font-family: 'Quantico', 'Arial Narrow', Arial, sans-serif;
   color: var(--font);
 }
@@ -40,6 +37,15 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-grow: 2;
+}
+
+.right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
 
 header {
@@ -357,13 +363,6 @@ button:active {
   transform: scale(2.25);
 }
 
-.right-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .foot {
   color: var(--font);
   font-size: 1rem;
@@ -382,7 +381,8 @@ button:active {
   }
 }
 
-@media (max-width: 70rem) {
+/* huge */
+@media (max-width: 1200px) {
   :root {
     --grid-test-size: 16.5rem;
     --grid-gap: calc(var(--grid-test-size) / 4);
@@ -401,7 +401,8 @@ button:active {
   }
 }
 
-@media (max-width: 56.25rem) {
+/* large */
+@media (max-width: 992px) {
   :root {
     --grid-test-size: 13.25rem;
     --grid-gap: calc(var(--grid-test-size) / 4);
