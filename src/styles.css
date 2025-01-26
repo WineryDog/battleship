@@ -35,7 +35,7 @@ main {
   color: var(--font);
 }
 
-.left-content {
+.content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,7 +43,7 @@ main {
   flex-grow: 2;
 }
 
-.right-content {
+.middle-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -364,7 +364,7 @@ button:active {
 
 .tgl-box {
   margin-bottom: var(--base-margin);
-  transform: scale(2);
+  transform: scale(1.7);
 }
 
 .foot {
@@ -393,7 +393,11 @@ button:active {
   }
 
   .tgl-box {
-    transform: scale(1.6);
+    transform: scale(1.25);
+  }
+
+  .game-btns {
+    transform: scale(0.85);
   }
 
   .info {
@@ -419,7 +423,7 @@ button:active {
     font-size: calc(var(--info-font) * 0.85);
   }
 
-  .right-content {
+  .middle-content {
     max-width: 15rem;
     margin-left: 0;
   }
@@ -439,7 +443,7 @@ button:active {
     flex-direction: column;
   }
 
-  .left-content {
+  .content {
     transform: scale(0.7);
   }
 }
