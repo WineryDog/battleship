@@ -39,6 +39,8 @@ const dom = (() => {
     isGameActive = false;
 
     fleet.innerHTML = '';
+    const checkbox = document.getElementById('cb3');
+    checkbox.checked = false;
     dom.renderFleetPreview();
 
     dom.renderFleet(p1.playerGb, p1GB);
